@@ -3,6 +3,8 @@ perl:
 - '5.20'
 install: []
 script:
+  - sudo apt-get update -q
+  - sudo apt-get install dnsutils
   - ip addr show
   - ip route show
   - ip -6 route show
