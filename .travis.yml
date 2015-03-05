@@ -9,8 +9,8 @@ script:
   - ip route show
   - ip -6 route show
   - host www.cpan.org
-  - curl --trace-time -O http://www.cpan.org/authors/id/K/KE/KENTNL/File-ShareDir-ProjectDistDir-1.000004.tar.gz -v
-  - curl --trace-time -O http://www.cpan.org/authors/id/K/KE/KENTNL/File-ShareDir-ProjectDistDir-1.000004.tar.gz -v
-  - curl --trace-time -O http://www.cpan.org/authors/id/K/KE/KENTNL/File-ShareDir-ProjectDistDir-1.000004.tar.gz -v
+  - curl --trace-time -O http://www.cpan.org/authors/id/K/KE/KENTNL/File-ShareDir-ProjectDistDir-1.000004.tar.gz -v -s
+  - curl --trace-time -O http://www.cpan.org/authors/id/K/KE/KENTNL/File-ShareDir-ProjectDistDir-1.000004.tar.gz -v -s
+  - curl --trace-time -O http://www.cpan.org/authors/id/K/KE/KENTNL/File-ShareDir-ProjectDistDir-1.000004.tar.gz -v -s
 notifications:
   email: false
