@@ -13,5 +13,6 @@ install:
   - cpan-install Test::Spelling
 script:
   - "perl -e'require Test::Spelling; Test::Spelling::_get_spellcheck_results;'"
+  - "perl -MTest::Spelling -e'all_pod_files_spelling_ok();'"
 notifications:
   email: false
