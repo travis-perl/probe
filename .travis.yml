@@ -3,11 +3,15 @@ perl:
   - '5.20'
 language: perl
 sudo: false
+addons:
+  apt:
+    packages:
+      - aspell
 before_install:
   - eval $(curl https://travis-perl.github.io/init)
 install:
   - cpan-install Test::Spelling
 script:
-  - true
+  - "perl -e'require Test::Spelling; Test::Spelling::_get_spellcheck_results;'"
 notifications:
   email: false
