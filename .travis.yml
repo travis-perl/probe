@@ -12,7 +12,7 @@ before_install:
 install:
   - cpan-install Test::Spelling
 script:
-  - "perl -e'require Test::Spelling; Test::Spelling::_get_spellcheck_results;'"
+  - "perl -le'require Test::Spelling; print for Test::Spelling::invalid_words_in(@ARGV);' lib/*"
   - "perl -MTest::Spelling -e'all_pod_files_spelling_ok();'"
 notifications:
   email: false
