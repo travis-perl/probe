@@ -6,13 +6,23 @@ sudo: false
 addons:
   apt:
     packages:
-      - aspell
-before_install:
-  - eval $(curl https://travis-perl.github.io/init)
-install:
-  - cpan-install Test::Spelling
+      - bash
+      - dash
+      - ksh
+      - zsh
+      - tcsh
+      - csh
+      - fish
+before_install: []
+install: []
 script:
-  - "perl -le'require Test::Spelling; print for Test::Spelling::invalid_words_in(@ARGV);' lib/*"
-  - "perl -MTest::Spelling -e'all_pod_files_spelling_ok();'"
+  - cat /etc/shells
+  - which bash
+  - which dash
+  - which ksh
+  - which zsh
+  - which tcsh
+  - which csh
+  - which fish
 notifications:
   email: false
