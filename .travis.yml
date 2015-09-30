@@ -24,5 +24,6 @@ script:
   - which tcsh
   - which csh
   - which fish
+  - fish --version
 notifications:
   email: false
